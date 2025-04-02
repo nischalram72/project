@@ -96,6 +96,7 @@
             width: 300px;
             text-align: center;
             transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
         }
         .project:hover {
             transform: scale(1.05);
@@ -155,21 +156,22 @@
     <section id="projects">
         <h2>My Projects</h2>
         <div class="project-list">
-            <div class="project">
-                <h3>Interactive Quiz App</h3>
-                <p>A dynamic quiz application with score tracking.</p>
+            <div class="project" id="project1">
+                <h3>Chatbot</h3>
+                <p>A dynamic chatbot application with interactive features.</p>
             </div>
-            <div class="project">
-                <h3>Weather App</h3>
+            <div class="project" id="project2">
+                <h3>Weather Conditioning</h3>
                 <p>Displays real-time weather updates using OpenWeather API.</p>
             </div>
-            <div class="project">
-                <h3>To-Do List</h3>
-                <p>A draggable and sortable task manager.</p>
+            <div class="project" id="project3">
+                <h3>AI Finance Tracker</h3>
+                <p>An intelligent financial management system.</p>
             </div>
         </div>
     </section>
- <section id="skills">
+    
+    <section id="skills">
         <h2>My Skills</h2>
         <ul>
             <li>HTML</li>
@@ -206,6 +208,17 @@
             let button = document.querySelector('.toggle-btn');
             button.textContent = document.body.classList.contains('light-mode') ? "Dark Mode" : "Light Mode";
         }
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("project1").addEventListener("click", function() {
+                window.location.href = "https://nischalram72.github.io/project1/";
+            });
+            document.getElementById("project2").addEventListener("click", function() {
+                window.location.href = "https://nischalram72.github.io/project2/";
+            });
+            document.getElementById("project3").addEventListener("click", function() {
+                window.location.href = "https://nischalram72.github.io/project3/";
+            });
+        });
     </script>
 </body>
 </html>
